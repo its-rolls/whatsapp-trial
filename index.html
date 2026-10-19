@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <div class="avatar me">ME</div>
+        <div class="header-icons">
+          <button title="New chat">&#9998;</button>
+          <button title="Menu">&#8942;</button>
+        </div>
+      </header>
+
+      <div class="search-wrap">
+        <input id="search" type="text" placeholder="Search or start a new chat" />
+      </div>
+
+      <ul class="chat-list" id="chatList"></ul>
+    </aside>
+
+    <!-- Chat window -->
+    <main class="chat">
+      <div class="empty" id="empty">
+        <h2>ChatApp for Web</h2>
+        <p>Select a conversation to start messaging.</p>
+      </div>
+
+      <section class="chat-window hidden" id="chatWindow">
+        <header class="chat-header">
+          <button class="back" id="backBtn" title="Back">&#8592;</button>
+          <div class="avatar" id="chatAvatar"></div>
+          <div class="chat-title">
+            <strong id="chatName"></strong>
+            <small id="chatStatus">online</small>
+          </div>
+          <div class="header-icons">
+            <button title="Search">&#128269;</button>
+            <button title="Menu">&#8942;</button>
+          </div>
+        </header>
+
+        <div class="messages" id="messages"></div>
+
+        <footer class="composer">
+          <button id="emojiBtn" title="Emoji">&#128512;</button>
+          <div class="emoji-panel hidden" id="emojiPanel"></div>
+          <input id="msgInput" type="text" placeholder="Type a message" autocomplete="off" />
+          <button id="sendBtn" class="send" title="Send">&#10148;</button>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
